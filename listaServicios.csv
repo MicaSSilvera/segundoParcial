@@ -1,0 +1,10 @@
+id_servicios,descripcion,tipo,precioUnitario,cantidad,totalServicio
+1,ruedo pantalon,1,250.00,2,0
+2,ensamble vestido,2,860.00,25,0
+3,costura correa mochila,3,450.00,60,0
+4,juego de baño,1,150.00,2,0
+5,manteles,2,1050.00,25,0
+6,fundas,3,385.00,60,0
+7,sabanas,1,500.00,2,0
+8,sillones,2,1250.00,25,0
+9,colchas,3,675.00,60,0
