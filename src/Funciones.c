@@ -21,7 +21,9 @@ void mostrarMenu (){
 	printf("\n 4) FILTRAR SERVICIOS POR TIPO");
 	printf("\n 5) MOSTRAR SERVICIOS ORDENADOS ALFABETICAMENTE");
 	printf("\n 6) GUARDAR SERVICIOS");
-	printf("\n 7) SALIR");
+	printf("\n 7) FILTRAR EL PRECIO TOTAL");
+	printf("\n 8) APLICAR DESCUENTO");
+	printf("\n 9) SALIR");
 
 	return;
 }//fin mostrarMenu
@@ -87,4 +89,5 @@ int validarEntero(char mensaje[]){
 
 	return numero;
 }//FIN validarEntero()
+///
 

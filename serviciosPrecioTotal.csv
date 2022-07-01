@@ -3,8 +3,5 @@ id_servicios,descripcion,tipo,precioUnitario,cantidad,totalServicio
 3,costura correa mochila,3,450.00,60,27000
 2,ensamble vestido,2,860.00,25,21500
 6,fundas,3,385.00,60,23100
-4,juego de baño,1,150.00,2,300
 5,manteles,2,1050.00,25,26250
-1,ruedo pantalon,1,250.00,2,500
-7,sabanas,1,500.00,2,1000
 8,sillones,2,1250.00,25,31250

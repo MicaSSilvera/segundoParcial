@@ -11,7 +11,6 @@
 
 #define TAM 50
 
-
 typedef struct {
 	int id_servicios;
 	char descripcion[TAM];
@@ -24,7 +23,7 @@ typedef struct {
 
 struct eServicios* cargaServios(int idNuevoServicio);
 
-#endif /* ESERVICIOS_H_ */
+
 
 int eServicio_getTipo(eServicios* this);
 ///
@@ -36,7 +35,7 @@ int obtenerTipoServicioPorTexto(char* texto);
 ///
 char* obtenerTipoServicioPorEntero(int numero);
 ///
-int eServicio_sortByDescripcion(void* servicioUno, void* servicioDos );
+int eServicio_sortByDescripcion(eServicios* servicioUno, eServicios* servicioDos );
 ///
 int eServicio_FilterByMinorista(void* servicio );
 ///
@@ -46,3 +45,7 @@ int eServicio_FilterByExportar(void* servicio );
 ///
 void eServicio_MapPrecioTotal(eServicios* servicio );
 
+int eServicio_FilterByPrecioTotal(eServicios* servicio );
+
+void eServicio_MapDescuento(eServicios* servicio);
+#endif /* ESERVICIOS_H_ */

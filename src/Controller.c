@@ -109,15 +109,8 @@ int controller_saveAsText(char* path , LinkedList* pArrayListServicios)
 
 	FILE* pArchivo;
 
+	//llamo a la funcion fopen() pasandole la ruta del archivo que quiero escribir si no la encuentra la crea. "w" = escritura de archivo
 	pArchivo = fopen(path, "w" );
-	/*
-	if(pArchivo == NULL){
-
-		printf("\n Error de apertura :s");
-
-		exit(1);
-
-	}//fin if*/
 
 	//llamo a la funcion ll_len() para que retorne el tamaño del LinkedList.
 	 size = ll_len(pArrayListServicios);

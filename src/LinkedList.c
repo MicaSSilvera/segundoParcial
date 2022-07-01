@@ -619,6 +619,7 @@ LinkedList* ll_map(LinkedList* this, void* (*pFunc) (void* element)) {
 	if (this != NULL) {
 		length = ll_len(this);
 		if (pFunc != NULL) {
+			//llamo a la funcion ll_newLinkedList() para crear la nueva linkedlist que voy a retornar en memoria.
 			cloneArray = ll_newLinkedList();
 			for (i = 0; i < length; i++) {
 

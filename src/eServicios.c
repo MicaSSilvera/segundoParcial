@@ -25,7 +25,7 @@ void  mostrarListaServicios(LinkedList* listaServicios){
 
 	 for(int i = 0; i<size ;i++){
 
-		//llamo a la funcion ll_get() que le paso un lista para que retorne el indice de un pasajero
+		//llamo a la funcion ll_get() que le paso un lista para que retorne el indice especifico de un pasajero
 		servicioLista = ll_get(listaServicios, i);
 
 		printf("\n *************************");
@@ -83,23 +83,14 @@ int obtenerTipoServicioPorTexto(char* texto){
 	return tipoServicio;
 }// FIN obtenerTipoPasajero
 ///
-int eServicio_sortByDescripcion(void* servicioUno, void* servicioDos ){
+int eServicio_sortByDescripcion(eServicios* servicioUno, eServicios* servicioDos ){
 
 	int retorno = -1;
-	char descripcionAuxUno[TAM];
-	char descripcionAuxDos[TAM];
 
 	if(servicioUno != NULL && servicioDos != NULL){
 
-		if(eServicio_getDescripcion(servicioUno, descripcionAuxUno) == 1){
-
-			if(eServicio_getDescripcion(servicioDos, descripcionAuxDos) == 1){
-
-				retorno = strcmp(descripcionAuxUno, descripcionAuxDos );
-
-			}//fin if
-
-		}//fin if
+		//llamo a la funcion strcmp que me devuelve 1 si el 1er elemento es mayor, 0 si son iguales o -1 si el primer elemento es menor.
+		retorno = strcmp(servicioUno->descripcion, servicioDos->descripcion );
 
 	}//fin if
 
@@ -209,3 +200,34 @@ void eServicio_MapPrecioTotal(eServicios* servicio ){
 	return;
 
 }//fin eServicio_MapPrecioTotal
+///
+int eServicio_FilterByPrecioTotal(eServicios* servicio ){
+
+	int retorno = -1;
+
+	if(servicio != NULL){
+
+		if(servicio->totalServicio > 1000){
+			retorno = 1;
+		}else{
+			retorno = 0;
+		}//fin if
+
+	 }//fin if
+
+	return retorno;
+}//fin eServicio_MapPrecioTotal
+
+void eServicio_MapDescuento(eServicios* servicio){
+
+	if(servicio != NULL){
+
+		servicio->totalServicio = servicio->totalServicio - (servicio->totalServicio * 10)/100;
+
+	}//fin if
+
+	return;
+}
+
+
+
